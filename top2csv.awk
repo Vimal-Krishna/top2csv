@@ -12,8 +12,7 @@ BEGIN {
   time = $3 
   {	
     empty_lines = 0
-    while(1) {
-      getline;
+    while(getline) {      
       if ($0 ~ /^$/) {
         break;
       }
@@ -55,8 +54,7 @@ BEGIN {
   }
 }
 /^\s*PID/ {
-  while(1) {
-    getline;
+  while(getline) {    
     if ($0 ~ /^$/) {
       break;
     }
